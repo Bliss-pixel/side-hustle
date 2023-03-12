@@ -9,20 +9,30 @@
 <body>
   <div>
     <h1>Sign-Up Form</h1>
-    <form action="">
-      <label for="fname"><input type="text" id="fname" name="firstname" value="fname">First Name:</label><br>
-      <label for="lname"><input type="text" id="lname" name="lastname" value="lname">Last Name:</label><br>
-      <label for="email"><input type="email" id="email" name="emailaddress" value="email">Email Address:</label><br>
-      <label for="phone"><input type="tel" id="phone" name="telephone" value="phone">Phone Number:</label><br>
+    <form action="/successpage.html/" method="post">
+      <label for="fname">First Name:<input required type="text" id="fname" name="firstname" value="first-name"></label><br>
+      <label for="lname">Last Name:<input required type="text" id="lname" name="lastname" value="last-name"></label><br>
+      <label for="email">Email Address:<input required type="email" id="email" name="emailaddress" value="email"></label><br>
+      <label for="phone">Phone Number:<input required type="tel" id="phone" name="telephone" value="phone"></label><br>
       <fieldset>
         <legend>Gender</legend>
-         <label for="msex"><input type="radio" id="msex" name="gender" value="msex"></label><br>
-         <label for="fsex"><input type="radio" id="fsex" name="gender" value="fsex"></label><br>
+         <label for="msex"><input type="radio" id="msex" name="gender" value="msex">Male</label><br>
+         <label for="fsex"><input type="radio" id="fsex" name="gender" value="fsex">Female</label><br>
         </fieldset>
-      <label for="pswd"><input type="password" id="pswd" name="security" value="pswd">Password:</label><br>
-      <input type="button">
-      <button></button>
+      <label for="pswd">Password:<input required type="password" id="pswd" name="security" value="pswd"></label><br>
+      <input type="submit" value="Submit" onclick="showSuccessMessage()" />
     </form>
+    
+    <div id="success-message" style="display: none;">
+      <p>Your form has been successfully submitted!</p>
+    </div>
+    
+    <script>
+    function showSuccessMessage() {
+      document.getElementById("success-message").style.display = "block";
+    }
+    </script>
+    
   </div>
 </body>
 </html>
