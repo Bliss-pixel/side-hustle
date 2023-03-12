@@ -10,7 +10,7 @@
 <body>
   <div>
     <h1>Sign-Up Form</h1>
-    <form action="/successpage.html/" method="post">
+    <form onsubmit="showSuccessMessage(); return false;">
       <label for="fname">First Name:<input required type="text" id="fname" name="firstname" value="first-name"></label><br>
       <label for="lname">Last Name:<input required type="text" id="lname" name="lastname" value="last-name"></label><br>
       <label for="email">Email Address:<input required type="email" id="email" name="emailaddress" value="email"></label><br>
@@ -32,7 +32,5 @@
       document.getElementById("success-message").style.display = "block";
     }
     </script>
-    
-  </div>
 </body>
 </html>
